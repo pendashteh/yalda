@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Yalda Night Gathering</title>
     
     <!-- YAML Configuration -->
     <script type="application/yaml" id="config">
 # Event Configuration
 event:
-  page_title: "Yalda Night Gathering - "
+  page_title: "Yalda Night Gathering - Kababi Cafe"
   main_title: "شب یلدا"
   subtitle: "A Gathering of Hearts & Hope"
   date_info: "Finding Light Together on the Longest Night<br>A safe space for families and friends"
 
-# Location & Time
+# Location & Time  
 venue:
   name: "Kababi Cafe"
-  address: 18A Market Rd, Sunshine VIC 3020
-  map: https://maps.app.goo.gl/DLFFFrEA3JrWWgmg9
+  address: "18A Market Rd, Sunshine VIC 3020"
+  map: "https://maps.app.goo.gl/DLFFFrEA3JrWWgmg9"
   description: "A warm gathering place for our community"
   
 timing:
@@ -47,6 +47,7 @@ footer:
   message: "For families and friends supporting loved ones from afar<br>Come find comfort in shared understanding"
   closing: "Though we cannot bridge all distances, we can bridge the space between us"
     </script>
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;700&display=swap');
         
@@ -62,8 +63,10 @@ footer:
             color: #fff;
             min-height: 100vh;
             overflow-x: hidden;
+            position: relative;
         }
         
+        /* Animated background elements */
         .stars {
             position: fixed;
             top: 0;
@@ -78,227 +81,12 @@ footer:
             position: absolute;
             background: #fff;
             border-radius: 50%;
-            animation: twinkle 2s infinite alternate;
+            animation: twinkle 3s infinite alternate;
         }
         
         @keyframes twinkle {
             0% { opacity: 0.3; transform: scale(1); }
-            100% { opacity: 1; transform: scale(1.2); }
-        }
-        
-        .container {
-            position: relative;
-            z-index: 2;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-        
-        .main-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
-            background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcf7f, #4ecdc4);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradient-shift 3s ease infinite;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
-        }
-        
-        @keyframes gradient-shift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        .subtitle {
-            font-size: 1.8rem;
-            color: #ffd93d;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 0 20px rgba(255, 217, 61, 0.5);
-        }
-        
-        .date-info {
-            font-size: 1.2rem;
-            color: #a8c8ff;
-            font-style: italic;
-            margin-bottom: 2rem;
-        }
-        
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: left 0.5s;
-        }
-        
-        .card:hover::before {
-            left: 100%;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(255, 107, 107, 0.2);
-        }
-        
-        .event-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .detail-item {
-            text-align: center;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .detail-item:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: scale(1.05);
-        }
-        
-        .detail-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        
-        .detail-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #ffd93d;
-            margin-bottom: 0.5rem;
-        }
-        
-        .detail-text {
-            font-size: 1.1rem;
-            line-height: 1.4;
-        }
-        
-        .tradition-section {
-            margin: 3rem 0;
-        }
-        
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            color: #ff6b6b;
-            text-align: center;
-            margin-bottom: 1.5rem;
-            text-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
-        }
-        
-        .tradition-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .tradition-item {
-            text-align: center;
-            padding: 1.5rem;
-            background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 217, 61, 0.1));
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .tradition-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.2);
-        }
-        
-        .tradition-emoji {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        
-        .tradition-name {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #ffd93d;
-        }
-        
-        .quote-section {
-            text-align: center;
-            margin: 3rem 0;
-            padding: 2rem;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .quote {
-            font-size: 1.4rem;
-            font-style: italic;
-            line-height: 1.6;
-            color: #a8c8ff;
-            margin-bottom: 1rem;
-        }
-        
-        .quote-author {
-            font-size: 1rem;
-            color: #ffd93d;
-        }
-        
-        .footer {
-            text-align: center;
-            margin-top: 3rem;
-            padding: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .footer-text {
-            font-size: 1.1rem;
-            color: #a8c8ff;
-            line-height: 1.6;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            .card {
-                padding: 1.5rem;
-            }
-            
-            .event-details {
-                grid-template-columns: 1fr;
-            }
+            100% { opacity: 1; transform: scale(1.3); }
         }
         
         .floating-elements {
@@ -312,8 +100,8 @@ footer:
         .floating-symbol {
             position: absolute;
             font-size: 2rem;
-            opacity: 0.1;
-            animation: float 10s infinite linear;
+            opacity: 0.15;
+            animation: float 12s infinite linear;
         }
         
         @keyframes float {
@@ -322,14 +110,328 @@ footer:
                 opacity: 0;
             }
             10% {
-                opacity: 0.1;
+                opacity: 0.15;
             }
             90% {
-                opacity: 0.1;
+                opacity: 0.15;
             }
             100% {
                 transform: translateY(-100px) rotate(360deg);
                 opacity: 0;
+            }
+        }
+        
+        /* Main content container */
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Header section */
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcf7f, #4ecdc4, #ff6b6b);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 4s ease infinite;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
+            letter-spacing: 2px;
+        }
+        
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .subtitle {
+            font-size: 2rem;
+            color: #ffd93d;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 25px rgba(255, 217, 61, 0.6);
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        
+        .date-info {
+            font-size: 1.3rem;
+            color: #a8c8ff;
+            font-style: italic;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        /* Card styling */
+        .card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 25px;
+            padding: 3rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+            transition: left 0.6s;
+        }
+        
+        .card:hover::before {
+            left: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(255, 107, 107, 0.3);
+            border-color: rgba(255, 255, 255, 0.35);
+        }
+        
+        /* Event details grid */
+        .event-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin: 2rem 0;
+        }
+        
+        .detail-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .detail-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+        }
+        
+        .detail-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+        }
+        
+        .detail-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #ffd93d;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 15px rgba(255, 217, 61, 0.3);
+        }
+        
+        .detail-text {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #e8f4f8;
+        }
+        
+        .venue-link {
+            color: #ffd93d !important;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .venue-link:hover {
+            color: #fff !important;
+            text-shadow: 0 0 20px rgba(255, 217, 61, 0.8);
+            transform: scale(1.05);
+        }
+        
+        .venue-address {
+            font-size: 0.95em;
+            color: #a8c8ff;
+            margin: 0.5rem 0;
+            font-style: italic;
+        }
+        
+        /* Section titles */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #ff6b6b;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 25px rgba(255, 107, 107, 0.4);
+            font-weight: 600;
+        }
+        
+        /* Tradition section */
+        .tradition-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+        
+        .tradition-item {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.15), rgba(255, 217, 61, 0.15));
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .tradition-item:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 12px 35px rgba(255, 107, 107, 0.25);
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.25), rgba(255, 217, 61, 0.25));
+        }
+        
+        .tradition-emoji {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+        }
+        
+        .tradition-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffd93d;
+            text-shadow: 0 0 10px rgba(255, 217, 61, 0.3);
+        }
+        
+        /* Quote section */
+        .quote-section {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            position: relative;
+        }
+        
+        .quote {
+            font-size: 1.6rem;
+            font-style: italic;
+            line-height: 1.7;
+            color: #a8c8ff;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 15px rgba(168, 200, 255, 0.3);
+        }
+        
+        .quote-author {
+            font-size: 1.1rem;
+            color: #ffd93d;
+            font-weight: 500;
+        }
+        
+        /* Main content text */
+        .main-content-text {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            text-align: center;
+            color: #e8f4f8;
+        }
+        
+        .main-content-text .emphasis {
+            font-style: italic;
+            color: #a8c8ff;
+            text-shadow: 0 0 10px rgba(168, 200, 255, 0.2);
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 3rem 2rem;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent);
+        }
+        
+        .footer-text {
+            font-size: 1.15rem;
+            color: #a8c8ff;
+            line-height: 1.7;
+        }
+        
+        .footer-venue {
+            color: #ffd93d;
+            font-weight: 600;
+            text-shadow: 0 0 15px rgba(255, 217, 61, 0.3);
+        }
+        
+        .footer-highlight {
+            color: #ff6b6b;
+            font-weight: 600;
+            text-shadow: 0 0 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            
+            .card {
+                padding: 2rem;
+                margin: 2rem 0;
+            }
+            
+            .event-details {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .main-title {
+                font-size: clamp(2.5rem, 8vw, 3.5rem);
+            }
+            
+            .subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .card {
+                padding: 1.5rem;
+            }
+            
+            .detail-item {
+                padding: 1.5rem;
             }
         }
     </style>
@@ -350,26 +452,36 @@ footer:
                 <div class="detail-item">
                     <span class="detail-icon">📍</span>
                     <div class="detail-title">Location</div>
-                    <div class="detail-text" id="venueInfo">
-                        <a href=""></a><br>A warm gathering place for our community
-                        </div>
+                    <div class="detail-text">
+                        <a href="" id="venueLink" target="_blank" class="venue-link">
+                            <span id="venueName">Venue Name</span>
+                        </a><br>
+                        <div class="venue-address" id="venueAddress">Address</div>
+                        <span id="venueDescription">Description</span>
+                    </div>
                 </div>
                 
                 <div class="detail-item">
                     <span class="detail-icon">🕗</span>
                     <div class="detail-title">Time</div>
-                    <div class="detail-text" id="timeInfo">8:00 PM onward<br>Come and go as you need</div>
+                    <div class="detail-text">
+                        <span id="eventTime">8:00 PM onward</span><br>
+                        <span id="timeDescription">Come and go as you need</span>
+                    </div>
                 </div>
                 
                 <div class="detail-item">
                     <span class="detail-icon">💝</span>
                     <div class="detail-title">Purpose</div>
-                    <div class="detail-text" id="purposeInfo">Finding hope together<br>Sharing warmth & support</div>
+                    <div class="detail-text">
+                        <span id="purposeTitle">Finding hope together</span><br>
+                        <span id="purposeDescription">Sharing warmth & support</span>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="card tradition-section">
+        <div class="card">
             <h3 class="section-title">What We'll Share Together</h3>
             <div class="tradition-grid">
                 <div class="tradition-item">
@@ -384,10 +496,14 @@ footer:
                     <span class="tradition-emoji">🤗</span>
                     <div class="tradition-name">Understanding Hearts</div>
                 </div>
+                <div class="tradition-item">
+                    <span class="tradition-emoji">🌙</span>
+                    <div class="tradition-name">Night Reflections</div>
+                </div>
             </div>
         </div>
         
-        <div class="card quote-section">
+        <div class="quote-section">
             <div class="quote" id="quoteText">
                 "Distance means nothing when someone means everything."
             </div>
@@ -396,106 +512,73 @@ footer:
         
         <div class="card">
             <h3 class="section-title" id="sectionTitle">Together Through Distance</h3>
-            <p style="font-size: 1.2rem; line-height: 1.8; text-align: center; color: #e8f4f8;">
-                <span id="mainDescription">This Yalda Night holds special meaning for many of us. With loved ones overseas facing uncertainty and challenges, the longest night reminds us that even when separated by distance, we can still be there for each other.</span>
+            <div class="main-content-text">
+                <p id="mainDescription">This Yalda Night holds special meaning for many of us. With loved ones overseas facing uncertainty and challenges, the longest night reminds us that even when separated by distance, we can still be there for each other.</p>
+                
                 <br><br>
-                <span id="secondaryDescription">We gather not to forget our worries, but to share them with people who understand. Whether your heart is heavy with news from family abroad, or you're simply feeling the weight of being far from those you love, this evening is for mutual support and quiet companionship.</span>
+                
+                <p id="secondaryDescription">We gather not to forget our worries, but to share them with people who understand. Whether your heart is heavy with news from family abroad, or you're simply feeling the weight of being far from those you love, this evening is for mutual support and quiet companionship.</p>
+                
                 <br><br>
-                <em id="emphasisMessage">Sometimes the most powerful thing we can do is simply sit together, acknowledging that we're not alone in our concerns for those we can't reach out and hold.</em>
-            </p>
+                
+                <p class="emphasis" id="emphasisMessage">Sometimes the most powerful thing we can do is simply sit together, acknowledging that we're not alone in our concerns for those we can't reach out and hold.</p>
+            </div>
         </div>
         
         <footer class="footer">
             <div class="footer-text">
-                <strong>📍 <span id="footerVenue"></span></strong><br>
+                <strong>📍 <span class="footer-venue" id="footerVenue">Kababi Cafe</span></strong><br><br>
                 <span id="footerDescription">A space for those whose hearts reach across oceans</span><br><br>
                 <span id="footerMessage">For families and friends supporting loved ones from afar<br>Come find comfort in shared understanding</span><br><br>
-                <strong>✨ <span id="closingMessage">Though we cannot bridge all distances, we can bridge the space between us</span> ✨</strong>
+                <strong class="footer-highlight">✨ <span id="closingMessage">Though we cannot bridge all distances, we can bridge the space between us</span> ✨</strong>
             </div>
         </footer>
     </div>
     
     <script>
-        // Create stars
+        // Create animated stars
         function createStars() {
             const starsContainer = document.getElementById('stars');
-            const numStars = 100;
+            const numStars = 120;
             
             for (let i = 0; i < numStars; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
                 star.style.left = Math.random() * 100 + '%';
                 star.style.top = Math.random() * 100 + '%';
-                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.width = Math.random() * 4 + 1 + 'px';
                 star.style.height = star.style.width;
-                star.style.animationDelay = Math.random() * 2 + 's';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                star.style.animationDuration = (Math.random() * 2 + 2) + 's';
                 starsContainer.appendChild(star);
             }
         }
         
         // Create floating symbols
         function createFloatingSymbols() {
-            const symbols = ['❄️', '✨', '🌟', '🍂', '🌙', '⭐'];
+            const symbols = ['❄️', '✨', '🌟', '🍂', '🌙', '⭐', '🕯️', '💫'];
             const container = document.getElementById('floating');
             
             setInterval(() => {
-                if (container.children.length < 15) {
+                if (container.children.length < 12) {
                     const symbol = document.createElement('div');
                     symbol.className = 'floating-symbol';
                     symbol.textContent = symbols[Math.floor(Math.random() * symbols.length)];
                     symbol.style.left = Math.random() * 100 + '%';
-                    symbol.style.animationDuration = (Math.random() * 5 + 8) + 's';
+                    symbol.style.animationDuration = (Math.random() * 6 + 10) + 's';
+                    symbol.style.fontSize = (Math.random() * 1.5 + 1.5) + 'rem';
                     container.appendChild(symbol);
                     
                     setTimeout(() => {
                         if (symbol.parentNode) {
                             symbol.parentNode.removeChild(symbol);
                         }
-                    }, 13000);
+                    }, 16000);
                 }
-            }, 2000);
+            }, 2500);
         }
         
-        // Load configuration from YAML and populate content
-        function loadConfiguration() {
-            try {
-                // Parse YAML configuration (using a simple YAML parser approach)
-                const yamlScript = document.getElementById('config');
-                const yamlText = yamlScript.textContent;
-                
-                // For demo purposes, we'll parse the YAML manually
-                // In a real implementation, you'd use a proper YAML parser like js-yaml
-                const config = parseSimpleYAML(yamlText);
-                
-                // Populate page elements
-                document.title = config.event.page_title;
-                document.getElementById('mainTitle').textContent = config.event.main_title;
-                document.getElementById('subtitle').textContent = config.event.subtitle;
-                document.getElementById('dateInfo').innerHTML = config.event.date_info;
-                
-                document.getElementById('venueInfo').innerHTML = config.venue.name + '<br>' + config.venue.description;
-                document.getElementById('timeInfo').innerHTML = config.timing.time + '<br>' + config.timing.description;
-                document.getElementById('purposeInfo').innerHTML = config.purpose.title + '<br>' + config.purpose.description;
-                
-                document.getElementById('quoteText').textContent = '"' + config.quote.text + '"';
-                document.getElementById('quoteAuthor').textContent = '— ' + config.quote.author;
-                
-                document.getElementById('sectionTitle').textContent = config.content.section_title;
-                document.getElementById('mainDescription').textContent = config.content.main_description;
-                document.getElementById('secondaryDescription').textContent = config.content.secondary_description;
-                document.getElementById('emphasisMessage').textContent = config.content.emphasis_message;
-                
-                document.getElementById('footerVenue').textContent = config.venue.name;
-                document.getElementById('footerDescription').textContent = config.footer.description;
-                document.getElementById('footerMessage').innerHTML = config.footer.message;
-                document.getElementById('closingMessage').textContent = config.footer.closing;
-                
-            } catch (error) {
-                console.error('Error loading configuration:', error);
-            }
-        }
-        
-        // Simple YAML parser for this specific structure
+        // Simple YAML parser
         function parseSimpleYAML(yamlText) {
             const config = {};
             const lines = yamlText.split('\n');
@@ -536,22 +619,89 @@ footer:
             return config;
         }
         
-        // Initialize animations and configuration
+        // Load configuration and populate content
+        function loadConfiguration() {
+            try {
+                const yamlScript = document.getElementById('config');
+                const yamlText = yamlScript.textContent;
+                const config = parseSimpleYAML(yamlText);
+                
+                // Populate page elements
+                document.title = config.event.page_title;
+                document.getElementById('mainTitle').textContent = config.event.main_title;
+                document.getElementById('subtitle').textContent = config.event.subtitle;
+                document.getElementById('dateInfo').innerHTML = config.event.date_info;
+                
+                // Venue information
+                document.getElementById('venueLink').href = config.venue.map;
+                document.getElementById('venueName').textContent = config.venue.name;
+                document.getElementById('venueAddress').textContent = config.venue.address;
+                document.getElementById('venueDescription').textContent = config.venue.description;
+                
+                // Timing and purpose
+                document.getElementById('eventTime').textContent = config.timing.time;
+                document.getElementById('timeDescription').textContent = config.timing.description;
+                document.getElementById('purposeTitle').textContent = config.purpose.title;
+                document.getElementById('purposeDescription').textContent = config.purpose.description;
+                
+                // Quote section
+                document.getElementById('quoteText').textContent = '"' + config.quote.text + '"';
+                document.getElementById('quoteAuthor').textContent = '— ' + config.quote.author;
+                
+                // Main content
+                document.getElementById('sectionTitle').textContent = config.content.section_title;
+                document.getElementById('mainDescription').textContent = config.content.main_description;
+                document.getElementById('secondaryDescription').textContent = config.content.secondary_description;
+                document.getElementById('emphasisMessage').textContent = config.content.emphasis_message;
+                
+                // Footer
+                document.getElementById('footerVenue').textContent = config.venue.name;
+                document.getElementById('footerDescription').textContent = config.footer.description;
+                document.getElementById('footerMessage').innerHTML = config.footer.message;
+                document.getElementById('closingMessage').textContent = config.footer.closing;
+                
+            } catch (error) {
+                console.error('Error loading configuration:', error);
+            }
+        }
+        
+        // Add enhanced hover effects
+        function addInteractiveEffects() {
+            // Card hover effects
+            document.querySelectorAll('.card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // Detail item effects
+            document.querySelectorAll('.detail-item').forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('.detail-icon');
+                    if (icon) {
+                        icon.style.transform = 'scale(1.2) rotate(10deg)';
+                    }
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    const icon = this.querySelector('.detail-icon');
+                    if (icon) {
+                        icon.style.transform = 'scale(1) rotate(0deg)';
+                    }
+                });
+            });
+        }
+        
+        // Initialize everything
         document.addEventListener('DOMContentLoaded', function() {
             loadConfiguration();
             createStars();
             createFloatingSymbols();
-        });
-        
-        // Add hover effects to cards
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
+            addInteractiveEffects();
         });
     </script>
 </body>
