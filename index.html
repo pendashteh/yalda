@@ -14,7 +14,7 @@ event:
   subtitle: "A Gathering of Hearts & Hope"
   date_info: "Finding Light Together on the Longest Night<br>A safe space for families and friends"
 
-# Location & Time  
+# Location & Date/Time  
 venue:
   name: "Kababi Cafe"
   address: "18A Market Rd, Sunshine VIC 3020"
@@ -22,6 +22,7 @@ venue:
   description: "A warm gathering place for our community"
   
 timing:
+  date: "Saturday, June 21st"
   time: "8:00 PM onward"
   description: "Come and go as you need"
   
@@ -462,10 +463,11 @@ footer:
                 </div>
                 
                 <div class="detail-item">
-                    <span class="detail-icon">🕗</span>
-                    <div class="detail-title">Time</div>
+                    <span class="detail-icon">📅</span>
+                    <div class="detail-title">Date & Time</div>
                     <div class="detail-text">
-                        <span id="eventTime">8:00 PM till late</span><br>
+                        <span id="eventDate">Saturday, June 21st</span><br>
+                        <span id="eventTime">8:00 PM onward</span><br>
                         <span id="timeDescription">Come and go as you need</span>
                     </div>
                 </div>
@@ -480,7 +482,7 @@ footer:
                 </div>
             </div>
         </div>
-        <!--
+        
         <div class="card">
             <h3 class="section-title">What We'll Share Together</h3>
             <div class="tradition-grid">
@@ -496,9 +498,13 @@ footer:
                     <span class="tradition-emoji">🤗</span>
                     <div class="tradition-name">Understanding Hearts</div>
                 </div>
+                <div class="tradition-item">
+                    <span class="tradition-emoji">🌙</span>
+                    <div class="tradition-name">Night Reflections</div>
+                </div>
             </div>
         </div>
-    -->
+        
         <div class="quote-section">
             <div class="quote" id="quoteText">
                 "Distance means nothing when someone means everything."
@@ -635,6 +641,7 @@ footer:
                 document.getElementById('venueDescription').textContent = config.venue.description;
                 
                 // Timing and purpose
+                document.getElementById('eventDate').textContent = config.timing.date;
                 document.getElementById('eventTime').textContent = config.timing.time;
                 document.getElementById('timeDescription').textContent = config.timing.description;
                 document.getElementById('purposeTitle').textContent = config.purpose.title;
